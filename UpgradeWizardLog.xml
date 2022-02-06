@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event>Get project references.</event>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\SCAPEN-2021\SCAPEN-2021.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="app.config" path="D:\SCAPEN-2021\app.config" />
+  <event action="Analyze" type="Success" name="ConexionRemota.resx" path="D:\SCAPEN-2021\Presentacion\AsistenteDeInstalacion\ConexionRemota.resx" />
+  <event action="Analyze" type="Success" name="InstalacionBD.resx" path="D:\SCAPEN-2021\Presentacion\AsistenteDeInstalacion\InstalacionBD.resx" />
+  <event action="Analyze" type="Success" name="SeleccionarServidor.resx" path="D:\SCAPEN-2021\Presentacion\AsistenteDeInstalacion\SeleccionarServidor.resx" />
+  <event action="Analyze" type="Success" name="UsuarioPrincipal.resx" path="D:\SCAPEN-2021\Presentacion\AsistenteDeInstalacion\UsuarioPrincipal.resx" />
+  <event action="Analyze" type="Success" name="ControlDeAsistencias.resx" path="D:\SCAPEN-2021\Presentacion\ControlDeAsistencias.resx" />
+  <event action="Analyze" type="Success" name="ControlDeCopiasBD.resx" path="D:\SCAPEN-2021\Presentacion\ControlDeCopiasBD.resx" />
+  <event action="Analyze" type="Success" name="ControlDePersonal.resx" path="D:\SCAPEN-2021\Presentacion\ControlDePersonal.resx" />
+  <event action="Analyze" type="Success" name="ControlDeUsuarios.resx" path="D:\SCAPEN-2021\Presentacion\ControlDeUsuarios.resx" />
+  <event action="Analyze" type="Success" name="Login.resx" path="D:\SCAPEN-2021\Presentacion\Login.resx" />
+  <event action="Analyze" type="Success" name="MenuPrincipal.aa.resx" path="D:\SCAPEN-2021\Presentacion\MenuPrincipal.aa.resx" />
+  <event action="Analyze" type="Success" name="MenuPrincipal.resx" path="D:\SCAPEN-2021\Presentacion\MenuPrincipal.resx" />
+  <event action="Analyze" type="Success" name="PrePlanilla.resx" path="D:\SCAPEN-2021\Presentacion\PrePlanilla.resx" />
+  <event action="Analyze" type="Success" name="ReportAsistencias.resx" path="D:\SCAPEN-2021\Presentacion\Reportes\ReportAsistencias.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\SCAPEN-2021\Properties\Resources.resx" />
+  <event action="Analyze" type="Success" name="SCAPEN-2021" path="D:\SCAPEN-2021\SCAPEN-2021.csproj" />
+  <event action="Analyze" type="Success" name="SCAPEN-2021" path="D:\SCAPEN-2021\SCAPEN-2021.sln" />
+</log>

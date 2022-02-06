@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8E4F0B0-C792-4166-9E4E-85FB63DB5785}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCAPEN_2021</RootNamespace>
+    <AssemblyName>SCAPEN-2021</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>scapen2021.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SCAPEN_2021.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icono-SCAPEN.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.Reporting, Version=13.0.19.116, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Telerik.ReportViewer.WinForms, Version=13.0.19.116, Culture=neutral, PublicKeyToken=a9d7983dfcc261be">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\ProcesosCopiasBD.cs" />
+    <Compile Include="Logica\CopiasBD.cs" />
+    <Compile Include="Logica\Decencriptacion.cs" />
+    <Compile Include="Logica\Encriptacion.cs" />
+    <Compile Include="Presentacion\AsistenteDeInstalacion\UsuarioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\UsuarioPrincipal.Designer.cs">
+      <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ControlDeCopiasBD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlDeCopiasBD.Designer.cs">
+      <DependentUpon>ControlDeCopiasBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\ConexionRemota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\ConexionRemota.Designer.cs">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\InstalacionBD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\InstalacionBD.Designer.cs">
+      <DependentUpon>InstalacionBD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\SeleccionarServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AsistenteDeInstalacion\SeleccionarServidor.Designer.cs">
+      <DependentUpon>SeleccionarServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\ConexionMaestra.cs" />
+    <Compile Include="Datos\Procesos.cs" />
+    <Compile Include="Datos\ProcesosAsistencia.cs" />
+    <Compile Include="Datos\ProcesosCargo.cs" />
+    <Compile Include="Datos\ProcesosModulos.cs" />
+    <Compile Include="Datos\ProcesosPermisos.cs" />
+    <Compile Include="Datos\ProcesosUsuarios.cs" />
+    <Compile Include="Logica\Asistencia.cs" />
+    <Compile Include="Logica\Cargo.cs" />
+    <Compile Include="Logica\Modulos.cs" />
+    <Compile Include="Logica\Permisos.cs" />
+    <Compile Include="Logica\Persona.cs" />
+    <Compile Include="Logica\Bases.cs" />
+    <Compile Include="Logica\Usuario.cs" />
+    <Compile Include="Presentacion\ControlDeAsistencias.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlDeAsistencias.Designer.cs">
+      <DependentUpon>ControlDeAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ControlDePersonal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlDePersonal.Designer.cs">
+      <DependentUpon>ControlDePersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\ControlDeUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\ControlDeUsuarios.Designer.cs">
+      <DependentUpon>ControlDeUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\PrePlanilla.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentacion\PrePlanilla.Designer.cs">
+      <DependentUpon>PrePlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Reportes\ReportAsistencias.Designer.cs">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AsistenteDeInstalacion\UsuarioPrincipal.resx">
+      <DependentUpon>UsuarioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ControlDeCopiasBD.resx">
+      <DependentUpon>ControlDeCopiasBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\AsistenteDeInstalacion\ConexionRemota.resx">
+      <DependentUpon>ConexionRemota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\AsistenteDeInstalacion\InstalacionBD.resx">
+      <DependentUpon>InstalacionBD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\AsistenteDeInstalacion\SeleccionarServidor.resx">
+      <DependentUpon>SeleccionarServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ControlDeAsistencias.resx">
+      <DependentUpon>ControlDeAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ControlDePersonal.resx">
+      <DependentUpon>ControlDePersonal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\ControlDeUsuarios.resx">
+      <DependentUpon>ControlDeUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MenuPrincipal.aa.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\PrePlanilla.resx">
+      <DependentUpon>PrePlanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Reportes\ReportAsistencias.resx">
+      <DependentUpon>ReportAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="scapen2021.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editarC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-SCAPEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\estaciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\respaldo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clasificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coworking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\despertador %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nombre1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximizar-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar-ventana-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-cargo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguiente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anterior.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ultimo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quitar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar-usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar-usuario %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edicion-de-imagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edicion-de-imagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edicion-de-imagen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fuego %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MonoOrus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nuclear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\palanca-de-mando.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trinaranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comenzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\extraterrestre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\foto %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor-de-computadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advertencia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pagina-de-inicio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abrir-carpeta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icono-SCAPEN.ico" />
+    <None Include="Resources\icons8-tarjeta-de-empleado-40.png" />
+    <None Include="Resources\icons8-asistente-48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
